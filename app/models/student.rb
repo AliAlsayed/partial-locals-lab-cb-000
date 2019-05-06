@@ -15,7 +15,6 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
 
   def self.search(term)
-    fail
     if term
       where('name LIKE ?', "%#{term}%")
     else

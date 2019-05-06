@@ -21,6 +21,7 @@ class StudentsController < ApplicationController
   end
 
   def index
+    fail
     @students = Student.search(params[:term])
   end
 
